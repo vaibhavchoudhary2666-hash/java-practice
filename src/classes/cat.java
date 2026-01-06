@@ -1,11 +1,11 @@
 package classes;
 
-public class ca {
+public class cat {
     String name;
     String colour;
     int age;
     String breed;
-    public ca(String name,String colour,int age,String breed) {
+    public cat(String name,String colour,int age,String breed) {
         this.name=name;
         this.colour=colour;
         this.age=age;
@@ -13,7 +13,7 @@ public class ca {
 
     }
     public static void main(String[] args) {
-        ca puccy=new ca("puccy","orange",4,"orange");
+        cat puccy=new cat("puccy","orange",4,"orange");
         System.out.println(puccy);
         System.out.println(puccy.name);
         System.out.println(puccy.colour);
