@@ -1,6 +1,8 @@
 package classes;
 
-public class cat {
+import Interface.animal;
+
+public class cat implements animal {
     String name;
     String colour;
     int age;
@@ -25,14 +27,30 @@ public class cat {
     public static void main(String[] args) {
         cat puccy=new cat("Puccy","orange",4,"Prussian");
         System.out.println(puccy);
-        System.out.println(puccy.name);
-        System.out.println(puccy.colour);
-        System.out.println(puccy.age);
-        System.out.println(puccy.breed);
-        System.out.print(puccy.getname()+"\t");
-        System.out.print(puccy.getage()+"\t");
-        System.out.print(puccy.getbreed()+ "\t");
-        System.out.print(puccy.getcolour()+"\t");
+        puccy.sleep();
+        puccy.dead();
+        puccy.sound();
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("cat is sleeping");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println(" cat is eating😸😸");
+
+    }
+
+    @Override
+    public void dead() {
+        animal.super.dead();
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("meawwwww");
 
     }
 }
